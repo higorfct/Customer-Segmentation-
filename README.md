@@ -1,1 +1,1 @@
-# Projeto-2-Segmenta-o-de-Clientes
+# Projeto 2: Segmentação de Clientes com K-Means
