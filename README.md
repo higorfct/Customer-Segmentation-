@@ -1,101 +1,101 @@
-# Projeto 2: Segmentação de Clientes
+# Project 2: Customer Segmentation
 
-## 📝 Introdução
-Este projeto tem como objetivo segmentar clientes com base em características demográficas e comportamentais para permitir uma atuação mais direcionada e estratégica por parte da área de marketing.
+## 📝 Introduction
+This project aims to segment customers based on demographic and behavioral characteristics, enabling more targeted and strategic action from the marketing area.
 
-Utilizamos técnicas de **Clusterização com KMeans**, precedidas de **padronização dos dados e redução de dimensionalidade com PCA**, para identificar **grupos distintos de clientes** a partir de variáveis como idade, renda, score de gastos e região.
-
----
-
-## 📊 Dados
-
-Os dados utilizados estão contidos no arquivo `segmentacao.csv` e abrangem as seguintes variáveis:
-
-- `customer_id` — Identificador único de cada cliente  
-- `age` — Idade  
-- `income` — Renda anual (em milhares de dólares)  
-- `spending_score` — Índice de propensão ao consumo (1 a 100)  
-- `region` — Região geográfica
-
-### Etapas realizadas:
-- Análise de valores faltantes  
-- Verificação de outliers  
-- Transformação de variáveis categóricas em dummies  
-- Padronização com `StandardScaler`  
-- Redução de dimensionalidade com PCA (mantendo 95% da variância dos dados originais)  
-- Clusterização com `KMeans`
+We used **KMeans Clustering** techniques, preceded by **data standardization and dimensionality reduction with PCA**, to identify **distinct groups of customers** based on variables such as age, income, spending score, and region.
 
 ---
 
-## 🤖 Modelagem com KMeans
+## 📊 Data
 
-A clusterização foi realizada com o algoritmo **KMeans**, utilizando como entrada os dados transformados por **PCA**. A definição do número ideal de clusters foi feita com base nas seguintes métricas:
+The data used is contained in the `segmentacao.csv` file and covers the following variables:
 
-- **Método do Cotovelo**
-- **Índice de Silhueta**
+- `customer_id` — Unique identifier for each customer  
+- `age` — Age  
+- `income` — Annual income (in thousands of dollars)  
+- `spending_score` — Propensity to consume index (1 to 100)  
+- `region` — Geographical region
 
-📌 **Número ótimo de clusters**: **4**
-
-Cada cliente foi classificado em um dos 4 clusters, permitindo a identificação de **padrões de comportamento e perfil demográfico**.
-
----
-
-## 🔍 Características dos Clusters
-
-| Cluster | Idade média | Renda média (k$) | Spending Score médio | Comportamento                       |
-|---------|-------------|------------------|-----------------------|-------------------------------------|
-| 0       | 25 anos     | 30               | 80                    | Jovens com alto consumo             |
-| 1       | 45 anos     | 80               | 40                    | Renda alta, consumo moderado        |
-| 2       | 32 anos     | 50               | 20                    | Clientes com baixo engajamento      |
-| 3       | 60 anos     | 40               | 70                    | Mais velhos com consumo recorrente  |
+### Steps performed:
+- Analysis of missing values  
+- Outlier detection  
+- Transformation of categorical variables into dummies  
+- Standardization with `StandardScaler`  
+- Dimensionality reduction with PCA (retaining 95% of the variance from the original data)  
+- Clustering with `KMeans`
 
 ---
 
-## 📈 Visualizações
+## 🤖 Modeling with KMeans
 
-- Gráficos de distribuição (histogramas e boxplots) para entender variáveis como `age`, `income`, `spending_score`
-- Gráfico de dispersão dos clusters no espaço de componentes principais (PCA)
-- Gráficos do **método do cotovelo** e do **índice de silhueta** para definir o número ótimo de clusters
+Clustering was performed using the **KMeans** algorithm, with input data processed by **PCA**. The optimal number of clusters was determined based on the following metrics:
 
----
+- **Elbow Method**
+- **Silhouette Index**
 
-## 🛠️ Ferramentas Utilizadas
+📌 **Optimal number of clusters**: **4**
 
-- **Python** – Linguagem principal  
-- **Pandas** – Manipulação de dados  
-- **Matplotlib / Seaborn** – Visualizações  
-- **Scikit-learn** – Pré-processamento, PCA, KMeans, métricas  
-- **Google Colab** – Ambiente de desenvolvimento
+Each customer was classified into one of the 4 clusters, allowing the identification of **behavioral patterns and demographic profiles**.
 
 ---
 
-## ✅ Resultados
+## 🔍 Cluster Characteristics
 
-- Quatro segmentos distintos de clientes foram identificados.  
-- O modelo permite ações de marketing mais direcionadas para perfis específicos.  
-- A clusterização revelou padrões úteis de comportamento de consumo por faixa etária, renda e região.
-
----
-
-## 🧠 Conclusões
-
-O projeto demonstra como a clusterização pode:
-
-- **Identificar padrões ocultos** em bases de clientes  
-- **Melhorar estratégias de marketing** e personalização  
-- Apoiar decisões de negócios baseadas em dados
+| Cluster | Average Age | Average Income (k$) | Average Spending Score | Behavior                                |
+|---------|-------------|---------------------|-----------------------|-----------------------------------------|
+| 0       | 25 years    | 30                  | 80                    | Young with high consumption             |
+| 1       | 45 years    | 80                  | 40                    | High income, moderate consumption       |
+| 2       | 32 years    | 50                  | 20                    | Customers with low engagement           |
+| 3       | 60 years    | 40                  | 70                    | Older with recurring consumption        |
 
 ---
 
-## 🔄 Próximos Passos
+## 📈 Visualizations
 
-- Adicionar variáveis comportamentais (frequência de compra, canais, etc.)  
-- Testar algoritmos alternativos como DBSCAN ou Hierarchical Cluster 
+- Distribution charts (histograms and boxplots) to understand variables like `age`, `income`, `spending_score`
+- Scatter plot of clusters in the principal components space (PCA)
+- **Elbow method** and **silhouette index** plots to define the optimal number of clusters
 
 ---
 
-🧑‍💻 **Autor e Contato**
+## 🛠️ Tools Used
+
+- **Python** – Main programming language  
+- **Pandas** – Data manipulation  
+- **Matplotlib / Seaborn** – Visualizations  
+- **Scikit-learn** – Preprocessing, PCA, KMeans, metrics  
+- **Google Colab** – Development environment
+
+---
+
+## ✅ Results
+
+- Four distinct customer segments were identified.  
+- The model enables more targeted marketing actions for specific profiles.  
+- Clustering revealed useful patterns of consumption behavior by age group, income, and region.
+
+---
+
+## 🧠 Conclusions
+
+The project demonstrates how clustering can:
+
+- **Identify hidden patterns** in customer databases  
+- **Improve marketing strategies** and personalization  
+- Support data-driven business decisions
+
+---
+
+## 🔄 Next Steps
+
+- Add behavioral variables (purchase frequency, channels, etc.)  
+- Test alternative algorithms such as DBSCAN or Hierarchical Clustering
+
+---
+
+🧑‍💻 **Author & Contact**
 
 Higor Roberto Coutinho Caetano  
 **LinkedIn**: [https://www.linkedin.com/in/higor-caetano-049521136/](https://www.linkedin.com/in/higor-caetano-049521136/)  
-**E-mail**: higorfct@gmail.com
+**Email**: higorfct@gmail.com
