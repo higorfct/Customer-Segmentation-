@@ -1,4 +1,4 @@
-# Project 2: Customer Segmentation
+# Customer Segmentation Project
 
 ## 📝 Introduction
 This project aims to segment customers based on demographic and behavioral characteristics, enabling more targeted and strategic action from the marketing area.
