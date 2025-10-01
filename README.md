@@ -5,8 +5,9 @@ This project aims to segment customers based on demographic and behavioral chara
 
 We used **KMeans Clustering** techniques, preceded by **data standardization and dimensionality reduction with PCA**, to identify **distinct groups of customers** based on variables such as age, income, spending score, and region.
 
+---
 
-
+## 🚀 How to use
 1. **Clone the repository and install dependencies:**
     ```bash
     git clone https://github.com/higorfct/Customer-Segmentation-
